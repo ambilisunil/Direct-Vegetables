@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: "Lato", sans-serif;
+  background-image:url("../gk1.jpg");
+  
+  opacity: 0.99;
+  background: linear-gradient(90deg, rgba(247,247,247,0) 10%, rgba(14,79,5,1) 8%, rgba(67,230,29,0.8267682072829132) 59%),url("../gk1.jpg");
+ 
+  background-size: auto;
+  
+}
+
+
+
+h1{
+    color:green;
+    margin-top: 150px;
+    margin-left: 100px;
+    color:rgb(13, 95, 2);color: green;
+    text-shadow: 1px 1px 2px black, 0 0 25px green, 0 0 5px green;
+    font-size:50px;
+}
+h4{
+  margin-left: 500px;
+  color:rgb(4, 27, 1);
+  margin-top: 40px;
+  font-size: 25px;
+}
+
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: arial;
+  font-size: 15px;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+#menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 220px;
+  background: #3ee254;
+  overflow: auto;
+}
+#content {
+  padding: 20px 30px;
+  
+}
+#menubar {
+  display: none;
+}
+.logo {
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+}
+.logo a {
+  font-size: 21px;
+}
+
+.side li {
+  position: relative;
+  list-style: none;
+  display: block;
+}
+.side li a {
+  font: bold 14px arial;
+  text-align: center;
+  letter-spacing: 1px;
+  line-height: 50px;
+  color: #146422;
+  display: block;
+  text-shadow: none;
+}
+.side li a:hover,
+.side li a.active {
+  color: #fff;
+  background: #37d466;
+}
+@media only screen and (min-width: 581px) {
+  #menu {
+    margin-left: 0 !important;
+  }
+  #main {
+    margin-left: 220px !important;
+  }
+}
+@media only screen and (max-width: 580px) {
+  #menu-icon {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -10px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  #menu-icon.active {
+    margin-top: -12px;
+  }
+  #menu-icon span {
+    border: 2px solid #4fe970;
+    width: 26px;
+    margin-bottom: 4px;
+    display: block;
+    -webkit-transition: transform 0.2s;
+    transition: transform 0.2s;
+  }
+  #menu-icon.active .first {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    margin-top: 10px;
+  }
+  #menu-icon.active .second {
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    position: relative;
+    top: -8px;
+  }
+  #menu-icon.active .third {
+    display: none;
+  }
+  #content {
+    padding: 60px 20px 30px;
+  }
+  #menubar {
+    width: 100%;
+    height: 50px;
+    background: rgb(2, 39, 16);
+    color: #fff;
+    padding: 15px;
+    position: fixed;
+    display: block;
+  }
+  #menu {
+    margin-left: -220px;
+  }
+  #main {
+    margin-left: 0;
+ 
+    
+  }
+}
+
+</style>
+<script type="text/javascript" >
+  function preventBack(){window.history.forward();}
+   setTimeout("preventBack()", 0);
+   window.onunload=function(){null};
+</script>
+</head>
+<body>
+
+
+  <header id="menu">
+    <div class="logo"><a href="#">Direct Vegetables</a></div>
+    <nav>
+      <ul class="side">
+        <li><a href="#" >HOME</a></li>
+        <li><a href="cviewproduct"> View Products</a></li>
+        <li>  <a href="orderhistory">Order History</a></li>
+        <li><a href="editcus">Account</a></li>
+        <li><a href="changepassword">Change Password</a></li>
+        <li><a href="logout">Logout</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div id="main" style=" opacity: 0.81;">
+    <div id="menubar">
+      <div id="menu-icon" class="">
+        <span class="first"></span><span class="second"></span><span class="third"></span>
+      </div>
+    </div>
+    <section id="content">
+      <div style='font:bold  44px arial;color:#09ad16;'>
+        <div class="main">
+          <h1> Welcome   <%= token[0].name %></h1>
+        </div>
+           <% if(sts){ %>
+             <h4> <%= sts %></h4>
+          <% } %>
+      </div>
+      <p>
+
+      </p>
+    </section>
+  </div>
+
+
+
+
+</body>
+</html> 

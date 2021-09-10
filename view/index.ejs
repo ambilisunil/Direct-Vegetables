@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+    function validateForms() {
+     var cnt = document.forms["Form1"]["phn"].value;
+       if (isNaN(cnt)) {
+        alert("Phone number have only numbers");
+        return false;
+    }
+    var l=cnt.length;
+   if (l != 10) {
+    alert("contact contain 10 digits");
+    return false;
+} 
+}
+function validateForms2() {
+     var cnt = document.forms["Form2"]["phn"].value;
+       if (isNaN(cnt)) {
+        alert("Phone number have only numbers");
+        return false;
+    }
+    var l=cnt.length;
+   if (l != 10) {
+    alert("contact contain 10 digits");
+    return false;
+}}
+  
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Direct Vegetables</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+
+</script>
+ <style>.login-container{
+  margin-top: 0%;
+  margin-bottom: 5%;
+  
+  
+  
+ 
+}
+.login-section{
+  display: flex;
+  justify-content: right;
+  width:90%;
+  align-items: right;
+
+ 
+ 
+
+}
+.innerlogin{
+  width:100%;
+  height: 20%;
+  
+ 
+ 
+
+}
+.login-logo{
+  position: relative;
+  margin-left: -41.5%;
+}
+.login-logo img{
+  position: absolute;
+  width: 20%;
+  margin-top: 19%;
+  background: #036429;
+  border-radius: 4.5rem;
+  padding: 5%;
+}
+.login-form-1{
+  padding: 9%;
+  background:#07910e;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+  
+}
+.login-form-1 h3{
+  text-align: center;
+  margin-bottom:12%;
+  color:#fff;
+}
+.login-form-2{
+  padding: 9%;
+  background: #207506;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 9px 26px 0 rgba(0, 0, 0, 0.19);
+}
+.login-form-2 h3{
+  text-align: center;
+  margin-bottom:12%;
+  color: #fff;
+}
+.btnSubmit{
+  font-weight: 600;
+  width: 50%;
+  color: #282726;
+  background-color: #fff;
+  border: none;
+  border-radius: 1.5rem;
+  padding:2%;
+}
+.btnForgetPwd{
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+}
+.btnForgetPwd:hover{
+  text-decoration:none;
+  color:#fff;
+}
+h1{
+  margin-top: 8%;
+  width:30%;
+  margin-left: 30px;
+}
+
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+.navbar {
+  
+  background-color: rgb(68, 185, 78); 
+  display: flex;
+  border:true;
+  height: 80px;
+  
+
+}
+
+.navbar a {
+  
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  width: 20%;
+ 
+}
+
+.subnav {
+  float: left;
+  overflow: hidden;
+
+}
+
+.subnav .subnavbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: rgb(230, 238, 229);
+  padding: 10px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  
+}
+
+.navbar a:hover, .subnav:hover .subnavbtn {
+  background-color: rgb(25, 121, 2);
+  border-style: solid;
+
+}
+
+.subnav-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: rgb(4, 73, 30);
+  width: 100%;
+  z-index: 1;
+ 
+  height: 100%;
+
+}
+
+.subnav-content a {
+  float: left;
+  color: white;
+  text-decoration: none;
+}
+
+.subnav-content a:hover {
+  background-color: rgb(164, 216, 184);
+  color: black;
+}
+
+.subnav:hover .subnav-content {
+  display: flex;
+
+}
+.section{
+  display: flex;
+ flex-wrap: wrap;
+ margin-left: 17px;
+ align-items: center;
+ justify-content: center;
+ 
+}
+</style>   
+</head>
+<body style="background-color:green;background-image: url(gk3jpg.jpg),url(bck.jpg);background-position: center;
+background-repeat: no-repeat;
+opacity: 0.92;
+background-size: cover;
+position: relative;">
+  
+    <script type='text/javascript'>
+        
+      </script>
+      <div class="navbar">
+        <a href="#home">Home</a>
+        <div class="subnav">
+          <button class="subnavbtn">Register <i class="fa fa-caret-down"></i></button>
+          <div class="subnav-content">
+            <a href="/regcus">As Customer</a>
+            <a href="regfarmer">As Farmer</a>
+          
+          </div>
+        </div> 
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      
+        
+        
+      </div>
+      
+ </div>
+         <div style="display: flex; margin-top: 1%; justify-content:center;align-items:center;color:red;text-shadow: 2px 2px red;background-color: rgb(207, 151, 151);">  <% if(sts){ %>
+             <h4> <%= sts %></h4>
+          <% } %>
+      </div>
+   <div class="news" style="display: flex; margin-top: 5%;" >
+    <h1 style="color:rgb(13, 95, 2);color: green;
+    text-shadow: 1px 1px 2px black, 0 0 25px green, 0 0 5px green;">Welcome to Direct Vegetables</h1>
+   <div class="login-section">
+     <div class="innerlogin"><div class="container login-container" style="width:550px;box-shadow:20px 20px 50px 15px #116814; ">
+    <div class="row" style="width:650px;">
+      
+        <div class="col-md-6 login-form-1"><form name="Form1"action="flogin" method="post" onsubmit="return validateForms()">
+            <h3>Farmer Login</h3>
+            
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Your Phone Number *" value="" name="phn"  required/>
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" placeholder="Your Password *" value="" name="pass"  required/>
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btnSubmit" value="Login" />
+                </div>
+                <div class="form-group">
+                   
+                </div>
+            
+        </div>
+      </form>
+        <div class="col-md-6 login-form-2" ><form name="Form2" action="clogin" method="post" onsubmit="return validateForms2()">
+            <div class="login-logo">
+                <img src="bck.jpg" alt=""/>
+
+            </div>
+            
+            <h3> Customer Login</h3>
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Your Phone Number *" value="" name="phn" required/>
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" placeholder="Your Password *" value="" name="pass" required />
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btnSubmit" value="Login" />
+                </div>
+                <div class="form-group">
+
+                   
+                </div>
+            
+        </div> </form>
+    </div>
+</div></div></div></div>
+<div id="about"></div>
+<h1 style="color:rgb(2, 39, 2);font-size: 20px;text-shadow: 1px 1px 2px rgb(1, 11, 56), 0 0 25px rgb(3, 87, 3), 0 0 5px rgb(8, 212, 8);">We Provide Fresh Vegitables Directly from Farmers</h1><br>
+   <div  class="section" style="display:flex;flex-direction: row;">
+
+    <% book.forEach(function(books){ %>
+     
+    <div class="card" style="width: 50%; margin-top: 10px;margin-right: 20px;margin-left: 20px;height: 390px;width:250px;">
+      <img class="card-img-top" src="/uplod/vegimages/<%= books.img %>" style="width:100%;height:250px;" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title"><%- books.catagory %></h5>
+        <p class="card-text">Type:<%- books.type %></p>
+        <p class="card-text">Price: <%- books.price %></p>
+       
+      </div>
+    </div> <%});%></div>
+    
+
+    <footer id = "contact"class="bg-light text-center text-lg-start" style="margin-top: 10%;" >
+      <!-- Grid container -->
+      <div class="container p-4" style="background-color: rgb(165, 241, 165);">
+        <!--Grid row-->
+        <div class="row">
+          <!--Grid column-->
+          <div class="col-lg-6 col-md-12 mb-4 mb-md-0" style="background-color: rgb(191, 247, 191);">
+            <h5 class="text-uppercase">Contact Us</h5>
+    
+            <p><br>
+             phone:7559038711<br>
+             email:ambilisunil1998@gmail.com<br>
+
+            </p>
+          </div>
+          <!--Grid column-->
+    
+          <!--Grid column-->
+          <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+            <h5 class="text-uppercase">Greenhouse vegetables</h5>
+    
+            <p>
+              
+The major greenhouse vegetables
+considered here are tomatoes,
+cucumbers, sweet pepper and
+lettuce. Growing these vegetables
+in a greenhouse results in higher
+productivity and also better quality,
+as well as greatly improved water
+efficiency, when compared with
+outdoor crop production. Also such
+vegetables have good acceptance
+with consumers, are versatile in
+consumption and have a good trade
+value
+            </p>
+          </div>
+          <!--Grid column-->
+        </div>
+        <!--Grid row-->
+      </div>
+      <!-- Grid container -->
+    
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgb(143, 233, 143);">
+        © 2021 Copyright:
+        <a class="text-dark" href="https://mdbootstrap.com/">Ambili Sunil</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+</body>
+</html>

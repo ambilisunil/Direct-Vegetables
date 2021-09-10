@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(8, 48, 3);
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: rgb(1, 36, 18);
+}
+
+.active {
+  background-color: #4CAF50;
+}
+body{
+            
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        
+        background-image: url("bck.jpg");
+            background-color:green;background-image: url(gk1.jpg),url(bck.jpg);background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        
+        }
+</style>
+</head>  <script type="text/javascript" >
+    function preventBack(){window.history.forward();}
+     setTimeout("preventBack()", 0);
+     window.onunload=function(){null};
+ </script>
+<title>Admin Home</title>
+<body>
+  
+  <ul>
+    <li><a class="active" href="home">Home</a></li>
+    <li><a href="customerlist">Customers List</a></li>
+    <li><a href="farmerslist">Farmers List</a></li>
+    <li><a href="orderlist">Order Deatils</a></li>
+    <li><a href="alogout">Logout</a></li>
+  </ul>
+
+</body>
+</html>

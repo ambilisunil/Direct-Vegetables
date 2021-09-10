@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order History</title>
+</head>
+<style>
+
+body{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+background-image: url("bck.jpg");
+    background-color:green;background-image: url(gk1.jpg),url(bck.jpg);background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+position: relative;
+
+}
+   
+ 
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  background-color: rgb(109, 167, 109);
+  width: 75%; box-shadow:20px 20px 50px rgb(176, 255, 196);
+  box-shadow:20px 20px 50px 15px #072508; 
+
+  
+
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #072508;
+  color: white;
+ 
+}
+th{
+ 
+ text-shadow: 2px 2px 8px #1eff00;
+ opacity: 83%;
+}
+a:link, a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 9px 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover, a:active {
+  background-color: red;
+}
+H1{
+  color:rgb(2, 63, 2);
+  text-shadow: 2px 2px 8px #1eff00;
+  font-size: 40px;;
+}
+
+.button {
+ 
+  font-size: 22px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #035306;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 3px rgb(121, 136, 124);
+  transform: translateY(4px);
+}
+
+    </style>
+<body>
+  <form> <button class="button" formaction="backcd" formmethod="Post"> Back to Home</button></form>
+<H1>Order Deatils</H1>
+    <table id="customers">
+        <tr>
+           <th>Catagory</th><th>count</th><th>Price</th><th>Final Amount</th><th>Approved(yes/no)</th><th>Order Deliverded(yes/no)</th><th></th>
+        </tr>
+     
+        <% for (var i = 0; i < content.length; /* I save the data in a variable 'quotation', I don't know how you named your variable  */  i++) { %>
+         <tr>
+           <td><%= content[i].vegname %></td>
+           <td><%= content[i].count %></td>
+           <td><%= content[i].price %></td>
+           <td><%= content[i].total %></td>
+           <td><%= content[i].approved %></td>
+           <td><%= content[i].delivered %></td>
+           
+            <td> <% if(content[i].approved ==="yes" & content[i].delivered==="no") {%>
+              <a href="customer_order_delivery?id=<%= content[i]._id %>" onclick="return confirm('Are you sure to mark as Deleveredithe item  <%= content[i].name %>?')">Conform Delivary</a>
+              <% } %>
+
+            </td>
+        
+         
+          
+           
+         </tr>    
+        <% } %>
+     </table>
+ 
+
+</body>
+</html>

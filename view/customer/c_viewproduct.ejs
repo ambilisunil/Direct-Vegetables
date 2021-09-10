@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script type="text/javascript">
+$("select[name='place'] > option").each(function () {
+    if(code[this.text]) {
+        $(this).remove();
+    } else {
+        code[this.text] = this.value;
+    }
+});
+   function increment() {
+      document.getElementById('count').stepUp();
+     
+   }
+   function decrement() {
+      document.getElementById('count').stepDown();
+   }
+
+   var code = {};
+   function validateForms() {
+    var cnt = document.getElementById("count").value
+  
+
+     if (((Number(cnt)))<1) {
+      alert("Enter correct Qundity");
+      return false;
+  }
+  
+  if (((Number(cnt)))>10000) {
+      alert("Enter correct Qundity");
+      return false;
+  }}
+</script>
+<style>
+.card-outer{
+ display: flex;
+ flex-wrap: wrap;
+ margin-left: 17px;
+ 
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(120, 255, 127, 0.2);
+  max-width: 300px;
+  
+  margin: auto;
+  text-align: center;
+  font-family: arial;
+   border: 1px solid green;
+  margin: 5px 5px 5px 5px;
+  height: 410px;
+ 
+ 
+}
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 2px;
+  font-size: 18px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+  margin-top: 2px;
+}
+col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color:rgb(13, 117, 13);
+  background-color: rgb(226, 255, 226);
+}
+
+a:link, a:visited {
+  background-color: #067026;
+  color: white;
+  
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border: none;
+  outline: 0;
+  padding: 12px;
+ 
+  
+  text-align: center;
+  cursor: pointer;
+  width: 80%;
+  font-size: 18px;
+}
+
+a:hover, a:active {
+  background-color: rgb(16, 214, 10);
+}
+
+select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+img{
+  width:300px;
+  height: 145px;;
+}
+.button {
+ 
+ font-size: 22px;
+ text-align: center;
+ cursor: pointer;
+ outline: none;
+ color: #fff;
+ background-color: #035306;
+ border: none;
+ border-radius: 15px;
+ box-shadow: 0 9px #999;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+ background-color: #3e8e41;
+ box-shadow: 0 3px rgb(121, 136, 124);
+ transform: translateY(4px);
+}
+</style>
+</head>
+<body>
+ 
+        
+<form> <button class="button" formaction="backcd" formmethod="Post"> Back to Home</button></form>
+
+<h2 style="text-align:center">Vegitable Market</h2>
+<div class="sts" style="width:100%;display:flex;align-items: center;color: red;"><h1><%=sts %></h1></div>
+<div class="row">
+<div class="col-75" style="display: flex; flex-direction: row;"><form style="display: flex; margin-right: 20px;"> 
+  <label for="catagory">Select Catagory </label><select name="catagory" id="catagory">
+  <option value="All">All</option>
+  <option value="Cabbage">Cabbage</option>
+  <option value="Carrot">Carrot</option>
+  <option value="Mushroom">Mushroom</option>
+  <option value="Onion">Onion</option>
+  <option value="Carrot">Carrot</option>
+  <option value="Cauliflower">Cauliflower</option>
+  <option value="Tomato">Tomato</option>
+  
+  <option value="bitterGourd">bitterGourd</option>
+  
+  <option value="LadysFinger">LadysFinger</option>
+</select><button formaction="search_product" formmethod="POST" value="Serach"> Search</button></form>
+<form style="display: flex;"> 
+ 
+  <label for="place">Select District</label>
+  <select  class="form" name="place" id="place">
+    <option value="All">All</option>
+
+
+
+
+
+    <option value="Alappuzha">Alappuzha</option>
+    <option value="Ernakulam">Ernakulam</option>
+  <option value="Idukki">Idukki</option>
+  <option value="Kannur">Kannur</option>
+  <option value="Kasaragod">Kasaragod</option>
+  <option value="Kollam">Kollam</option>
+  <option value="Kottayam">Kottayam</option>
+  <option value="Kozhikode">Kozhikode</option>
+  <option value="Malappuram">Malappuram</option>
+  <option value="Palakkad">Palakkad</option>
+   <option value="Pathanamthitta">Pathanamthitta</option>
+   <option value="Thiruvananthapuram">Thiruvananthapuram</option>
+   <option value="Thrissur">Thrissur</option>
+   <option value="Wayanad">Wayanad</option>
+  
+  </select><button formaction="search_place" formmethod="POST" value="Serach"> Search</button></form> 
+</div>
+</div>
+<div class="list>"><div class="card-outer">
+  
+<% product.forEach(function(p){ %>
+ 
+  
+  <div class="card">
+  <form action="cus-order-product?id=<%= p._id %>" method="post" name="Form1" >
+
+
+  <img src="/uplod/vegimages/<%= p.img %>" alt="Denim Jeans" >
+  
+  
+  <h1><%- p.catagory %></h1>
+  <p class="price">Rs:<%- p.price %><br>
+  Type:<%- p.type %>
+<br>Farmer:<%- p.fname %><br>
+<%- p.place %>,<%- p.district %>
+</p>
+
+ <p> Quantity:<input type="number" id="count" name="count" style="width:22%; ;"> 
+    <button type="submit">Order Now</button>
+  
+</form></div>   <br>   
+
+
+<%});   %>
+
+</div>
+<div>
+</body>
+</html>
